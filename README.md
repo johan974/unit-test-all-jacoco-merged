@@ -1,0 +1,18 @@
+This simple Maven/Java project with only 1 Domain class shows the basic features for testing and code quality. 
+The following plugins are used: 
+* Surefire and Failsafe - Unit or Integration testing
+* Findbugs - Code inspector
+* Jaoco - Test coverage
+
+Results: 
+* Scenario 1: 
+  * mvn clean install -Pdev               ==> performs the unit test
+  * mvn site                              ==> test coverage ... of 57%
+* Scenario 2: 
+  * mvn clean install -Pintegration-test  ==> performs the INTEGRATION test
+  * mvn site                              ==> test coverage ... of 60%
+* Scenario 3: 
+  * clean install -Pall-tests sonar:sonar ==> 100%  
+  
+Where are the Jacoco results? 
+After testing and running 'mvn clean', you can find the results in 'target/site/jacoco/index.html'. Open this file in the browser. 
